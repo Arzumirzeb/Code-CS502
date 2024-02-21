@@ -151,11 +151,69 @@ console.log(arr3.filter(i => !i));
 console.log(arr3.filter(i => typeof i === "string"));
 
 
-////////////// TASK 9 //////////////
+////////////// TASK 8 //////////////
 const numbers = [1, 2, 4, 5, 3, 2, 5, 7, 8, 9, 11, 12, 22, 24, 25]
 // 1.Console (only even numbers) 
 console.log(numbers.filter(i => i % 2 === 0));
 // 2.Console (only odd numbers)
 console.log(numbers.filter(i => i % 2 === 1));
 
+////////////// TASK 9 //////////////
+const arr4 = [10, "29", 10, 100, 11, 'true', false, 'undefined', true, null, 'something', false]
 
+// 1.Console all values of arr4 -
+// if value is number add it 10, if value is string add to it value + is string,if is value falsy value add to it value+ is falsly value(with return word)
+
+// Example: [10,'true',false]
+// Result: [20, "true is string", "false is falsy value"]
+const newarr2 = arr4.map(i =>{
+  if (typeof i === "number") return i + 10;
+  else if (typeof i === "string") return i + " is string";
+  else if (!i) return i + " is falsy value"
+})
+console.log(newarr2);
+
+// 2.Sum all numbers of arr4
+console.log(arr4.filter(i => typeof i === "number").reduce((acc, curr) => acc + curr))
+
+// 3.Count only the values that are true
+console.log(arr4.filter(i => i).length);
+
+// 4.Count only the values that are string
+console.log(arr4.filter(i => typeof i === "string").length);
+
+// 5.Count only the values that are false
+console.log(arr4.filter(i => !i).length);
+
+////////////// TASK 10 //////////////
+// 1.Create a object add your name, surname, age and city.
+const obj3 = {
+  name: "Arzu",
+  surname: "Mirzabayova",
+  age: "20",
+  city: "Baku"
+}
+// 2.Then change name to "Jhon"
+obj3.name = "Jhon"
+console.log(obj3);
+
+
+
+const obj2 = {
+    email: 'ulfat@gmail.com',
+    info: {
+        gender: 'Male',
+        loc: {
+            city: "Baku",
+            street: 'Nizami 22',
+            education: {
+                "uni name": "ADNSU",
+            }
+        }
+    }
+}
+
+// 3.Console gender
+console.log(obj2.info.gender);
+// 4.Console city
+console.log(obj2.info.loc.city);
