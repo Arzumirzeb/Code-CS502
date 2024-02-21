@@ -72,7 +72,7 @@ console.log('test3', test); // something
 //Find the type of all the following cases
 
 let name1 = "Ulfat" //string
-let surname1 = Zakirli //give error undefined
+//let surname1 = Zakirli //give error undefined
 let year1 = 2000 //number
 year = "2000" //string
 let city; //undefined
@@ -89,6 +89,73 @@ console.log(typeof qualification);
 console.log(typeof obj);
 console.log(typeof arr);
 
+////////////// TASK 6 //////////////
+const arr1 = [9, 1, 5, 8, 9, 9, 3, 22, 11, 12, 32, 8]
+// 1.Sum all the numbers in 'arr1'
+// 2.Add two numbers (10,88) to end of arr1 (push methods)
+// 3.Remove first two numbers from arr1
+// 4.Add three numbers (0,9,11) in front of arr1(unshift)
+// 5.Remove four numbers in front of arr1(shift)
+let sum = 0
+arr1.map(i => sum += i)
+console.log(sum);
 
+arr1.push(10)
+arr1.push(88)
+arr1.shift()
+arr1.shift()
+arr1.unshift(11)
+arr1.unshift(9)
+arr1.unshift(0)
+arr1.shift()
+arr1.shift()
+arr1.shift()
+arr1.shift()
+console.log(arr1);
+
+////////////// TASK 7 //////////////
+const arr2 = ["Murad", "Anar", "Rufet", 'Anar', 'Gulshen', 'Nermin', "Ilkin", "Fuad", "Anar"]
+// 1.Console values from "Rufet" to "Fuad"
+console.log(arr2.slice(arr2.findIndex(i => i == "Rufet"), arr2.findIndex(i => i == "Fuad") + 1));
+// 2.Change Gulshen to Rovshen
+const index = arr2.findIndex(name => name == "Gulshen")
+if (index) arr2[index] = "Rufet"
+console.log(arr2);
+// 3.Console each name with map
+arr2.map(name => console.log(name));
+// 4.Console only names which is Anar
+console.log(arr2.find(name => name === "Anar"));
+// 5.Console all names where name is Anar change it to "Perviz"
+const newarr = arr2.map(name => {
+  if (name === "Anar") return "Perviz"
+  return name;
+});
+console.log(newarr);
+// 6.Console second to last value of arr2
+console.log(arr2[arr2.length - 2]);
+// 7.Console length of arr2
+console.log(arr2.length);
+
+
+////////////// TASK 8 //////////////
+const arr3 = ["9", 10, 100, 11, 'true', 'undefined', true, null, 'something', false]
+// (use typeof), like this: filter((item) => typeof item === 'string')
+
+// 1.Show only numbers
+console.log(arr3.filter(i => typeof i === "number"));
+// 2.Show only true values
+console.log(arr3.filter(i => i));
+// 3.Show only false values
+console.log(arr3.filter(i => !i));
+// 4.Show only strings
+console.log(arr3.filter(i => typeof i === "string"));
+
+
+////////////// TASK 9 //////////////
+const numbers = [1, 2, 4, 5, 3, 2, 5, 7, 8, 9, 11, 12, 22, 24, 25]
+// 1.Console (only even numbers) 
+console.log(numbers.filter(i => i % 2 === 0));
+// 2.Console (only odd numbers)
+console.log(numbers.filter(i => i % 2 === 1));
 
 
