@@ -217,3 +217,83 @@ const obj2 = {
 console.log(obj2.info.gender);
 // 4.Console city
 console.log(obj2.info.loc.city);
+
+
+////////////// TASK 11 //////////////
+
+// let fullName = 'Ulfat Zakirli Rovshen'
+
+// 1) Ad soyad ata adinizi butov sheklde goturun ve array sheklinde herflerine ayirin(split)
+let fullName = "Arzu Mirzabayova Parviz"
+console.log(fullName.split(""));
+
+// 2) FullName'də soyadinizi adinizin onune keciren alqoritm yazin
+// 3) Alinan yeni arrayi stringe cevirin(join)
+
+let names = fullName.split(" ")
+
+let temp = names[0]
+names[0] = names[1]
+names[1] = temp
+
+console.log(names.join(" "));
+
+
+let arr5 = [4, 5, 2, 1, 5, 2, 5, 3, 5, 6, 2, 1, 6, 2, 6, 2, 5, 3, 2, 7, 4, 6, 4, 5, 6, 2, 5, 6, 3, 7, 3, 7]
+
+// QEYD - Bu tasklarda "arr" arrayindan istifade edilecekdir.....
+
+//4) Yuxaridaki arrayda 5 reqeminin nece defe tekrarlandigini tapin
+console.log(arr5.filter(i => i === 5).length);
+
+//5) Yuxaridaki arraydaki butun reqemlerin cemini tapin
+console.log(arr5.reduce((acc, curr) => acc + curr, 0));
+
+//6) arrayda tekrar olunan reqemleri artan sira ile duzun
+console.log(arr5.filter((num, index) => arr5.indexOf(num) !== index && arr5.lastIndexOf(num) === index).sort((a, b) => a - b));
+
+//7) arraydaki en boyuk reqemi tapin ve nece defe tekrarlandigini gosterin(Math.max)
+let maxNum = Math.max(...arr5)
+console.log(maxNum);
+console.log(arr5.filter(i => i === maxNum).length);
+
+//8) Adinizdaki herflerin sayini tapin ve hemin sayin arrayda olub olmamasini yoxlayin Meselen Ulfat adinda 5 herf var ve 5 arrayda var(includes)
+let name2 = "Arzu"
+let lengthName = name2.length
+console.log(arr5.includes(lengthName));
+
+//9) arraydaki ilk 3 e bolunende qaliqda 2 alinan reqemi ve hemin reqemin arraydaki indexini tapin
+let num3 = arr5.find(i => i % 3 === 2);
+console.log(arr5.findIndex(i => i === num3));
+
+//10) arraydaki en boyuk reqemin ilk indexini tapin
+console.log(arr5.findIndex(i => i === maxNum));
+
+//11) 4 reqeminin arrayin hansi indexlerinde oldugunu gosterin
+let indexof4 = arr5.reduce((acc, curr, index) => {
+  if (curr === 4) {
+    acc.push(index);
+  }
+  return acc;
+}, [])
+console.log(indexof4);
+
+//12) 5 reqeminin arraydaki en boyuk ve en kicik indexlerini tapin
+console.log(arr5.indexOf(5));
+console.log(arr5.lastIndexOf(5));
+
+//13) "arr" - arrayindan reqemleri 2 den boyuk olan yeni array yaradin ve alinmish arrayla "arr" arrayinin uzunluqlari ferqini hesablayin
+let newarr3 = arr5.filter(i => i > 2)
+let result2 = arr5.length - newarr3.length
+console.log(result2);
+
+//14) 7 reqeminin indexleri cemini tapin.
+let indexof7 = arr5.reduce((acc, curr, index) => {
+  if (curr === 7) {
+    acc.push(index);
+  }
+  return acc;
+}, [])
+sum2 = 0
+let sumOfIndex = indexof7.reduce((acc, curr) => acc + curr)
+console.log(sumOfIndex);
