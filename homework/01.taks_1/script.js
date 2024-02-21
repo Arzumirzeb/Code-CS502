@@ -34,3 +34,61 @@ let cityName = "Baku"
 console.log(cityName);
 cityName = "Gence"
 console.log(cityName);
+
+////// TASK 2 //////////////
+
+let a = 1, b = 1
+let c = ++a
+let d = b++
+console.log(c) // 2
+console.log(d) // 1
+console.log(b) // 2
+
+////////////// TASK 3 //////////////
+
+let e = 2;
+let f = 1 + (e *= 2);
+console.log(f); // 5
+
+////////////// TASK 4 //////////////
+
+console.log('test1', test); // undefined
+{
+    let test = "something"
+    console.log('test2', test); // something
+}
+console.log('test3', test);  // undefined
+
+
+console.log('test1', test);  // undefined
+{
+    var test = "something"
+    console.log('test2', test); // something
+}
+console.log('test3', test); // something
+
+////////////// TASK 5 //////////////
+
+//Find the type of all the following cases
+
+let name1 = "Ulfat" //string
+let surname1 = Zakirli //give error undefined
+let year1 = 2000 //number
+year = "2000" //string
+let city; //undefined
+let qualification = null //object
+let obj = { name: 'ulfat' } //object
+let arr = ['a', 'b', 'c'] //object
+
+console.log(typeof name1);
+console.log(typeof surname1);
+console.log(typeof year1);
+console.log(typeof year);
+console.log(typeof city);
+console.log(typeof qualification);
+console.log(typeof obj);
+console.log(typeof arr);
+
+
+
+
