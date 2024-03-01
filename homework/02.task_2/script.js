@@ -131,7 +131,7 @@ function findLength4(arr) {
 }
 const array4 = findLength4(arr2);
 console.log(array4);
-// 23 arr2 de en boyuk "key" - i olan obyektin "name"-i ni tapin
+// +23 arr2 de en boyuk "key" - i olan obyektin "name"-i ni tapin
 function findNameOfLargestKey(arr) {
   let largestKey = arr[0].key;
   let nameOfKey = arr[0].name;
