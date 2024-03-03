@@ -1,0 +1,41 @@
+.myForm {
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+    align-items: center;
+
+}
+
+form {
+    height: 350px;
+    border: 1px dashed plum;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+input {
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+label {
+    color: plum;
+}
+
+
+button {
+    color: #fff;
+    background-color: plum;
+    height: 40px;
+    cursor: pointer;
+}
+button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+}
+
+h3 {
+    text-align: center;
+}
