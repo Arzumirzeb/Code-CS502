@@ -6,6 +6,7 @@ const password = document.querySelector("#password")
 const confirm_password = document.querySelector("#confirm_password")
 
 
+
 form.addEventListener('submit', (e) => {
     e.preventDefault()
     const user = {
