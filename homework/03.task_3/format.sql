@@ -23,6 +23,8 @@ VALUES ('1', 'Arzu', 'Mirzabayova', '20', 'ASOIU', 'Baku'),
 ('10', 'Furidin', 'Furiidinli', '20', 'ASOIU', 'Baku'),
 ('11', 'Arzu', 'Mirzabayova', '20', 'ASOIU', 'Baku')
 
+SELECT * FROM Students;
+
 SELECT age FROM Students;
 
 SELECT firstname, lastname FROM Students;
@@ -34,3 +36,33 @@ SELECT * FROM Students WHERE  NOT `firstName` = "Arzu";
 SELECT * FROM Students WHERE `firstName` LIKE '_U%';
 
 UPDATE Students SET city = 'Rome' WHERE `StudentID` IN (2, 3);
+
+SELECT * FROM Students WHERE age > 20;
+
+SELECT * FROM Students ORDER BY age ASC;
+
+SELECT * FROM Students ORDER BY `firstName` DESC;
+
+SELECT DISTINCT `firstName` FROM Students;
+
+SELECT SUM(age) FROM Students;
+
+SELECT * FROM Students ORDER BY age ASC LIMIT 1;
+
+SELECT * FROM Students ORDER BY age DESC LIMIT 1;
+
+SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS
+ WHERE `TABLE_SCHEMA` = 'Students' 
+   AND `TABLE_NAME` = 'Students';
+
+SELECT AVG(age) FROM Students;
+
+DELETE FROM Students WHERE `StudentID` = 5;
+
+SELECT * FROM Students WHERE `firstName` in ('Hasan', 'Arzu');
+
+SELECT * FROM Students WHERE age BETWEEN 22 and 29;
+
+SELECT * FROM Students LIMIT 4;
+
+DROP TABLE Students;
